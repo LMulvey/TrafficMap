@@ -5,6 +5,7 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "immutable": "^3.8.2",
+    "mapbox-gl": "^0.47.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-map-gl": "^3.3.0",
