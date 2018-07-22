@@ -33,7 +33,7 @@ export default class Map extends Component {
           "data": this.state.data
         },
         "paint": {
-          "circle-radius": 5,
+          "circle-radius": 7,
           "circle-color": "#B4D455"
         }
       })
@@ -57,6 +57,14 @@ export default class Map extends Component {
         `)
         .addTo(map);
     });
+
+    map.on('mouseenter', 'points', () => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    map.on('mouseleave', 'points', () => {
+      map.getCanvas().style.cursor = '';
+    })
     
     this.setState({ map });
   }
