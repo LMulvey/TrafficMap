@@ -21,12 +21,14 @@ class Home extends Component {
   }
 
   render() {
+    const { data } = this.props.API;
+    const count =  data && data.features.length;
     return (
       <div>
-        <Header appName={this.state.applicationName} />
+        <Header count={count} appName={this.state.applicationName} />
 
         <Container>
-          <Map data={this.props.API.data} />
+          <Map data={data} />
         </Container>
       </div>
     );
